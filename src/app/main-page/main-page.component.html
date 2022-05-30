@@ -1,0 +1,16 @@
+<header><h1>List of prohibited words:</h1></header>
+<main>
+    <div class="container">
+        <form class="cenzor-form">
+            <p class="cenzor-form-words">Bad words: <span class="bad-words">{{badWords}}</span></p>
+            <div class="cenzor-block">
+                <input [class]="inputClass" type="text" [placeholder]="inputPlaceholder" name="cenzorInput" [(ngModel)]="inputValue">
+                <button id="add" (click)="addBadWords($event)">Add</button>
+                <button id="reset" (click)="resetBadWords($event)">Reset</button>
+            </div>
+            <textarea class="cenzor-form-textarea" placeholder="text here..." name="cenzorTextarea" [(ngModel)]="textareaValue"></textarea>
+            <button id="cenzor" (click)="cenzor($event)">Cenzor</button>
+        </form>
+    </div>
+</main>
+<footer></footer>

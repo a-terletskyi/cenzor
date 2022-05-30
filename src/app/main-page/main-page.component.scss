@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+:focus-visible {
+    outline: none;
+    box-shadow: 0 0 5px 1px #61b3ff;
+}
+
+header {
+    border-bottom: solid 1px #cecece;
+
+    h1 {
+        padding: 20px 0;
+        text-align: center;
+        font-size: 26px;
+    }
+}
+
+footer {
+    height: 30px;
+    border-top: solid 1px #cecece;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.cenzor-form {
+    &-words {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .bad-words {
+        color: #d30505;
+    }
+
+    .cenzor-block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        &-input {
+            width: 70%;
+            padding: 10px 10px 7px;
+        }
+      
+        #add {
+            width: 13%;
+            background-color: #ffcc2d;
+        }
+        
+        #add:active {
+            border-color: #ffcc2d;
+            box-shadow: 0 0 1px 2px #ffcc2d;
+        }
+
+        #reset {
+            width: 13%;
+            color: #ffffff;
+            background-color: #d30505;
+        }
+        
+        #reset:active {
+            border-color: #d30505;
+            box-shadow: 0 0 1px 2px #d30505;
+        }
+    }
+
+    &-textarea {
+        width: 100%;
+        min-height: 90px;
+        padding: 10px 10px 7px;
+        margin-bottom: 15px;
+        resize: none;
+    }
+
+    #cenzor {
+        width: 100%;
+        padding: 10px 0;
+        color: #ffffff;
+        background-color: #1eb41e;  
+    }
+
+    #cenzor:active {
+        border-color: #1eb41e;
+        box-shadow: 0 0 1px 2px #1eb41e;
+    }
+}
+
+.cenzor-block-input, .cenzor-form-textarea, #add, #reset, #cenzor {
+    font-size: 16px;
+    border: solid 1px #cecece;
+}
+
+#add:hover, #reset:hover, #cenzor:hover {
+    cursor: pointer;
+    filter: brightness(90%) saturate(90%);
+}
+
+.invalid {
+    border: solid 1px #d30505;
+}
+
+.valid {
+    border: solid 1px #1eb41e;
+}
